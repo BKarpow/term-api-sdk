@@ -13,7 +13,7 @@ class TermCore:
         self.return_code = 0
         self.prefix = 'termux-'
         self.commands = {
-            'battery': self.prefix + 'battry-status',
+            'battery': self.prefix + 'battery-status',
             'fingerprint': self.prefix + 'fingerprint',
             'wifi-scan': self.prefix + 'wifi-scan'
             
