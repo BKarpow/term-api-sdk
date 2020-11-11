@@ -1,0 +1,26 @@
+2020-11-11T09:24:14.440232+0300 INFO Battary status test.
+2020-11-11T09:24:14.460233+0300 INFO Debug-mode enable!
+2020-11-11T09:24:14.462232+0300 INFO Command Ececute: termux-battry-status
+2020-11-11T09:26:28.204232+0300 INFO Battary status test.
+2020-11-11T09:26:28.224233+0300 INFO Debug-mode enable!
+2020-11-11T09:26:28.742232+0300 ERROR An error has been caught in function 'BattaryStatus', process 'MainProcess' (9744), thread 'MainThread' (9180):
+Traceback (most recent call last):
+
+  File "term.py", line 22, in <module>
+    TApi.BattaryStatus()
+    |    -> <function Term.BattaryStatus at 0x02F2D1D8>
+    -> <__main__.Term object at 0x034B7070>
+
+> File "term.py", line 14, in BattaryStatus
+    self.commandExecute('tasklist')
+    |    -> <function TermCore.commandExecute at 0x034D1AD8>
+    -> <__main__.Term object at 0x034B7070>
+
+  File "C:\Users\XemerOne\Documents\python\term-api-sdk\term\core.py", line 47, in commandExecute
+    output = output.decode(encoding).rstrip()
+             |      |      -> 'UTF-8'
+             |      -> <method 'decode' of 'bytes' objects>
+             -> b'\r\n\x88\xac\xef \xae\xa1\xe0\xa0\xa7\xa0                     PID \x88\xac\xef \xe1\xa5\xe1\xe1\xa8\xa8          \xfc \xe1\...
+
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x88 in position 2: invalid start byte
+2020-11-11T09:26:28.870231+0300 INFO Command Ececute: termux-battry-status
