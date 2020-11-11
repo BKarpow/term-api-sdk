@@ -11,8 +11,8 @@ class Term(TermCore):
 
     def BattaryStatus(self):
         cmd = self.getComands('battery')
-        self.commandExecute('tasklist')
-        logger.info('Command Ececute: '+cmd)
+        self.commandExecute(cmd)
+        logger.info('Command Ececute: ' + cmd)
 
 
 if __name__ == '__main__':
